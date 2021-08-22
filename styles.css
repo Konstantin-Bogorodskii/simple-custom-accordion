@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff1e1;
+}
+
+.accordion {
+  width: 800px;
+}
+
+.accordion__item {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.accordion__title {
+  position: relative;
+  padding: 10px;
+  background-color: #1d3c45;
+  color: #d2601a;
+  cursor: pointer;
+}
+
+.accordion__title::before {
+  content: '+';
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  transform: translate(-50%, -50%);
+}
+
+.accordion__content {
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  height: 0;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 7px rgba(29, 60, 69, 0.7);
+}
+
+.accordion__active {
+  height: 150px;
+  padding: 20px;
+}
+
+.accordion__title-active::before {
+  content: '=';
+}
